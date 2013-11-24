@@ -1,0 +1,28 @@
+<h1>Your Gmail To-Do List</h1>
+<br>
+<table>
+	<tr>
+		<th>Done?</th>
+		<th>To-do</th>
+	</tr>
+	<% @todo.each do |todo| %>
+		<tr>
+			<td><input type="checkbox"></td>
+			<td><%= todo.subject %></td>
+		</tr>
+	<% end %>
+</table>
+<br><br>
+<hr style="color:#000000;" >
+<br>
+<p><b>Don't have any more to-dos? Import your gmail to-dos below:</b></p>
+<br>
+<%= form_tag "/import", method: "GET" do %>
+	<p>GMail Account</p>
+	<%= text_field_tag :e, params[:e] %>
+	<br><br>
+	<p>Password</p>
+	<%= password_field :p, params[:p] %>
+	<br><br>
+	<%= submit_tag "Get To-dos" %>
+<% end %>

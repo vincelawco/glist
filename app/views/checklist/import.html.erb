@@ -1,0 +1,10 @@
+<h3>Import Your To-dos</h3>
+
+<% @import.each do |import| %>
+	<ul>
+		<li><%= import.subject %></li>
+	</ul>
+<% end %>
+<%= form_tag "/import", method: "GET" do %>
+	<%= submit_tag "Import" %>
+<% end %>

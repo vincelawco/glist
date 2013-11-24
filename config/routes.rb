@@ -6,6 +6,8 @@ Glist::Application.routes.draw do
   # root 'welcome#index'
   
   root 'checklist#index'
+  get '/todo' => 'checklist#todo'
+  get '/import' => 'checklist#import'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

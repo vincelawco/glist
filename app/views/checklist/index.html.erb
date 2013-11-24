@@ -1,9 +1,13 @@
-<h1>Rawr</h1>
+<h1>Welcome to gList<h1>
+<h4>Your GMail Check List</h4>
+<p>Enter your gmail email address here:</p>
 
-<ul>
-<% @emails.each do |email| %>
-  <li>
-    <%= email.subject %>
-  </li>
+<%= form_tag "/todo", method: "GET" do %>
+	<p>GMail Account</p>
+	<%= text_field_tag :e, params[:e] %>
+	<br><br>
+	<!--<p>Password</p>
+	<%= password_field :p, params[:p] %>
+	<br><br>-->
+	<%= submit_tag "Submit" %>
 <% end %>
-</ul>

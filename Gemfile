@@ -6,6 +6,7 @@ gem 'gmail'
 gem 'gmail_xoauth'
 gem 'better_errors'
 gem 'binding_of_caller'
+gem 'bootstrap-sass'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
